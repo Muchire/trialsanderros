@@ -21,4 +21,6 @@ def week10():
 def week11():
     print("can't remember")
 def week12():
-    print("we'll see")
+    print("nothing to record really")
+def week13():
+    print("on going")
