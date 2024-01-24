@@ -100,7 +100,7 @@
 
 #print("pi can be displayed as {:.4f}".format(number))
 #print("{:b}".format(number))
-import random
+# import random
 #cards = random.randrange(1,2,3)
 
 #print(cards)
@@ -193,9 +193,43 @@ import random
 #print("bye")
 
 
+# numbers = [2,2,2,5]
+# for x_count in numbers:
+#     output='x_count'
+#
+#     print (output)
+
+# squares = []                      #create an empty
+# for i in range (1,11):              #FOR LOOP
+#     squares. append(i*i)              #DEFINE WHAT EACH SHOULD DOX
+# print (squares)
+#
+# square = [ i*i for i in range (1,11)]
+# print (square)
+# list comprehensionms and dictionary comprehensions
 
 
+# def temp (value):
+#     if value >=40:
+#         return "hot"
+#     elif value <=39:
+#         return "cold"
+#
+#
+# cities = {'newyork':32,'nairobi':44,'nakuru':45,'chicogo':30}
+# city= {key: temp(value) for (key,value)in cities.items()}
+# print(city)
 
+# zip function
+# food= ("fries","fish","samosa","smokie")
+# prices =(100,250,20,40)
+# method = ("fried","boiled","fried","boiled/fried")
+#
+# menu =zip (food,prices,method)
 
+# for i in menu:
+#     print(i)
 
-
+# import weeks
+#
+# weeks

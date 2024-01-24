@@ -1,4 +1,4 @@
-def week1():
+def week1(): 
     print("the voice\nand he his smart")
 def week2():
     print("the beard,the tatoo\nand he's so easy to talk to")

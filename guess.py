@@ -13,11 +13,11 @@ while True:
     print ("GUESS THE FEELING")
     feeling = input (":").lower()
     if feeling == "happy":
-        print("i can't stop smiling :)")
+        print("i can't stop smiling 😁:)")
     elif feeling == "sad":
-        print("i just wanna cry --")
+        print("i just wanna cry 😢--")
     elif feeling == "grumpy":
-        print("I miss you <>")
+        print("I miss you <🙁")
     elif feeling == "annoyed":
         print("it's not what you said it's how you said it :(")
     elif feeling == "idk":
