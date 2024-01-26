@@ -12,8 +12,12 @@ label=Label(vivan,text= "Hello There!",
 label.pack()
 label2 = Label(vivan,text = "How are you?")
 label2.place(x=100,y=30)
-
+#
+# count= 0
 # def click():
+#     global count
+#     count +=1
+#     print(count)
 #     print("love you")
 #
 #
@@ -29,30 +33,31 @@ label2.place(x=100,y=30)
 # icon = PhotoImage(file="logo.jpg")
 # vivan.iconphoto(True,icon)
 
-def submit():
-    username = entry.get()
-    print("Hello \n"+username+
-          "\nhow's your day going")
 
-# def delete():
+# def submit():
+#     username = entry.get()
+#    print("Hello \n"+username+
+#           "\nhow's your day going")
+#
+# # def delete():
 #     entry.delete(0,END)
 #
 # def backspace():
 #
 #      entry.delete(len(entry.get())-1,END)
-#
-entry= Entry(vivan,
-             font= ("Arial",10),
-             bg= "purple",
-             fg="pink",
-             show="$")
-# entry.insert(1,"best",)
-entry.pack(side=RIGHT)
-
-submit_button= Button(vivan,text="submit",
-                      command=submit,
-                      bg="purple")
-submit_button.pack(side=RIGHT)
+# #
+# entry= Entry(vivan,
+#              font= ("Arial",10),
+#              bg= "purple",
+#              fg="pink",
+#              show="$")
+# # entry.insert(1,"best",)
+# entry.pack(side=RIGHT)
+# #
+# submit_button= Button(vivan,text="submit",
+#                       command=submit,
+#                       bg="purple")
+# submit_button.pack(side=RIGHT)
 
 # delete_button= Button(vivan,text="delete",
 #                       command=delete,
@@ -89,32 +94,88 @@ submit_button.pack(side=RIGHT)
 #                           )
 # check_button.pack()
 
-food = [ '🍚Rice','🍙Ugali','🥗Greens','🍘Beans','🍳Eggs']
-
-def order():
-    if(x.get()==0):
-        print("you ordered rice")
-    elif (x.get()==1):
-        print("you ordered ugali")
-    elif (x.get()==2):
-        print("you ordered greens")
-    elif (x.get()==3):
-        print("you ordered beans")
-    elif (x.get()==4):
-        print("you ordered eggs")
-    else :
-        print("Sorry it's all we got")
-x=IntVar()
-
-for index in range(len(food)):
-   menu = Radiobutton(vivan,text = food[index],
-                      variable=x,
-                      font= ("Impact",20),
-                      value=index,
-                      bg="purple",
-                      fg="pink",
-                      command = order,
-                      )
-   menu.pack(anchor = "w")#lists the items downwards (side=LEFT) lists the items in a line
+# food = [ '🍚Rice','🍙Ugali','🥗Greens','🍘Beans','🍳Eggs']
+#
+# def order():
+#     if(x.get()==0):
+#         print("you ordered rice")
+#     elif (x.get()==1):
+#         print("you ordered ugali")
+#     elif (x.get()==2):
+#         print("you ordered greens")
+#     elif (x.get()==3):
+#         print("you ordered beans")
+#     elif (x.get()==4):
+#         print("you ordered eggs")
+#     else :
+#         print("Sorry it's all we got")
+# x=IntVar()
+#
+# for index in range(len(food)):
+#    menu = Radiobutton(vivan,text = food[index],
+#                       variable=x,
+#                       font= ("Impact",20),
+#                       value=index,
+#                       bg="purple",
+#                       fg="pink",
+#                       command = order,
+#                       )
+   # menu.pack(anchor = "w")#lists the items downwards (side=LEFT) lists the items in a line
    # menu.place(x=50,y=100)
+
+def done():
+    # global count
+    # count +=1
+    # print(count)
+   # print( listbox.get(listbox.curselection())) selection mode has changed
+
+   students=[]
+
+   for i in listbox.curselection():
+        students.insert(i,listbox.get(i))
+
+   for i in students:
+        print(i)
+def add():
+    listbox.insert(listbox.size(),entrybox.get())
+    listbox.config(height=listbox.size())
+
+def delete():
+    listbox.delete(listbox.curselection())
+
+listbox = Listbox(vivan,
+                  bg="purple",
+                  fg="pink",
+                  font=("Constantia",25),
+                  selectmode=MULTIPLE)
+listbox.pack()
+
+
+listbox.insert(1,"mark")
+listbox.insert(2,"john")
+listbox.insert(3,"luke")
+listbox.insert(4,"jane")
+listbox.insert(5,"ann")
+
+
+listbox.config(height=listbox.size())
+# count = 0
+
+entrybox = Entry(vivan)
+entrybox.pack()
+
+addbutton = Button(vivan,text="add missing name",
+                   command= add)
+addbutton.pack()
+
+
+deletebutton = Button(vivan,text="delete",
+                   command= delete)
+deletebutton.pack()
+
+donebutton= Button(vivan,text= "done",
+                   command= done )
+donebutton.pack()
+
+
 vivan.mainloop()
