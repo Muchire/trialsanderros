@@ -1,17 +1,17 @@
 from tkinter import *
 
-vivan = Tk()
-
-vivan.geometry("300x300")
-vivan.title("first GUI ")
-vivan.config(background="pink") #or search hex colour picker and copy the code
-label=Label(vivan,text= "Hello There!",
-            font = ("Arial",10,"bold"),
-            fg = "gray",
-            bg="black")
-label.pack()
-label2 = Label(vivan,text = "How are you?")
-label2.place(x=100,y=30)
+# vivan = Tk()
+#
+# vivan.geometry("300x300")
+# vivan.title("first GUI ")
+# vivan.config(background="pink") #or search hex colour picker and copy the code
+# label=Label(vivan,text= "Hello There!",
+#             font = ("Arial",10,"bold"),
+#             fg = "gray",
+#             bg="black")
+# label.pack()
+# label2 = Label(vivan,text = "How are you?")
+# label2.place(x=100,y=30)
 #
 # count= 0
 # def click():
@@ -123,59 +123,59 @@ label2.place(x=100,y=30)
    # menu.pack(anchor = "w")#lists the items downwards (side=LEFT) lists the items in a line
    # menu.place(x=50,y=100)
 
-def done():
-    # global count
-    # count +=1
-    # print(count)
-   # print( listbox.get(listbox.curselection())) selection mode has changed
-
-   students=[]
-
-   for i in listbox.curselection():
-        students.insert(i,listbox.get(i))
-
-   for i in students:
-        print(i)
-def add():
-    listbox.insert(listbox.size(),entrybox.get())
-    listbox.config(height=listbox.size())
-
-def delete():
-    listbox.delete(listbox.curselection())
-
-listbox = Listbox(vivan,
-                  bg="purple",
-                  fg="pink",
-                  font=("Constantia",25),
-                  selectmode=MULTIPLE)
-listbox.pack()
-
-
-listbox.insert(1,"mark")
-listbox.insert(2,"john")
-listbox.insert(3,"luke")
-listbox.insert(4,"jane")
-listbox.insert(5,"ann")
-
-
-listbox.config(height=listbox.size())
-# count = 0
-
-entrybox = Entry(vivan)
-entrybox.pack()
-
-addbutton = Button(vivan,text="add missing name",
-                   command= add)
-addbutton.pack()
-
-
-deletebutton = Button(vivan,text="delete",
-                   command= delete)
-deletebutton.pack()
-
-donebutton= Button(vivan,text= "done",
-                   command= done )
-donebutton.pack()
-
-
-vivan.mainloop()
+# def done():
+#     # global count
+#     # count +=1
+#     # print(count)
+#    # print( listbox.get(listbox.curselection())) selection mode has changed
+#
+#    students=[]
+#
+#    for i in listbox.curselection():
+#         students.insert(i,listbox.get(i))
+#
+#    for i in students:
+#         print(i)
+# def add():
+#     listbox.insert(listbox.size(),entrybox.get())
+#     listbox.config(height=listbox.size())
+#
+# def delete():
+#     listbox.delete(listbox.curselection())
+#
+# listbox = Listbox(vivan,
+#                   bg="purple",
+#                   fg="pink",
+#                   font=("Constantia",25),
+#                   selectmode=MULTIPLE)
+# listbox.pack()
+#
+#
+# listbox.insert(1,"mark")
+# listbox.insert(2,"john")
+# listbox.insert(3,"luke")
+# listbox.insert(4,"jane")
+# listbox.insert(5,"ann")
+#
+#
+# listbox.config(height=listbox.size())
+# # count = 0
+#
+# entrybox = Entry(vivan)
+# entrybox.pack()
+#
+# addbutton = Button(vivan,text="add missing name",
+#                    command= add)
+# addbutton.pack()
+#
+#
+# deletebutton = Button(vivan,text="delete",
+#                    command= delete)
+# deletebutton.pack()
+#
+# donebutton= Button(vivan,text= "done",
+#                    command= done )
+# donebutton.pack()
+#
+#
+# vivan.mainloop()
