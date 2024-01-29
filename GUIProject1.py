@@ -4,6 +4,8 @@ from tkinter import filedialog
 stick = Tk()
 def create_note():
     new_note = Tk()
+
+    stick.destroy() #destroys the old tk that is the old sticknote
 def savefile():
     file= filedialog.asksaveasfile(initialdir="C:\\Users\\user\\PycharmProjects\\trialsanderros",
                                    defaultextension=".txt",

@@ -1,6 +1,6 @@
 from tkinter import *
 
-# vivan = Tk()
+vivan = Tk()
 #
 # vivan.geometry("300x300")
 # vivan.title("first GUI ")
@@ -94,34 +94,34 @@ from tkinter import *
 #                           )
 # check_button.pack()
 
-# food = [ '🍚Rice','🍙Ugali','🥗Greens','🍘Beans','🍳Eggs']
-#
-# def order():
-#     if(x.get()==0):
-#         print("you ordered rice")
-#     elif (x.get()==1):
-#         print("you ordered ugali")
-#     elif (x.get()==2):
-#         print("you ordered greens")
-#     elif (x.get()==3):
-#         print("you ordered beans")
-#     elif (x.get()==4):
-#         print("you ordered eggs")
-#     else :
-#         print("Sorry it's all we got")
+food = [ '🍚Rice','🍙Ugali','🥗Greens','🍘Beans','🍳Eggs']
+
+def order():
+    if(x.get()==0):
+        print("you ordered rice")
+    elif (x.get()==1):
+        print("you ordered ugali")
+    elif (x.get()==2):
+        print("you ordered greens")
+    elif (x.get()==3):
+        print("you ordered beans")
+    elif (x.get()==4):
+        print("you ordered eggs")
+    else :
+        print("Sorry it's all we got")
 # x=IntVar()
 #
-# for index in range(len(food)):
-#    menu = Radiobutton(vivan,text = food[index],
-#                       variable=x,
-#                       font= ("Impact",20),
-#                       value=index,
-#                       bg="purple",
-#                       fg="pink",
-#                       command = order,
-#                       )
-   # menu.pack(anchor = "w")#lists the items downwards (side=LEFT) lists the items in a line
-   # menu.place(x=50,y=100)
+for index in range(len(food)):
+   menu = Radiobutton(vivan,text = food[index],
+                      variable=x,
+                      font= ("Impact",20),
+                      value=index,
+                      bg="purple",
+                      fg="pink",
+                      command = order,
+                      )
+   menu.pack(anchor = "w")#lists the items downwards (side=LEFT) lists the items in a line
+   menu.place(x=50,y=100)
 
 # def done():
 #     # global count
@@ -178,4 +178,4 @@ from tkinter import *
 # donebutton.pack()
 #
 #
-# vivan.mainloop()
+vivan.mainloop()
