@@ -1,6 +1,8 @@
 import pyqrcode
 import os,shutil
 
+
+
 title = input("give a title :")
 text = input("qr code should say?")
 
@@ -18,6 +20,8 @@ os.mkdir(fr"C:\Users\user\Desktop\{title}")
 
 shutil.move(f"{filesvg}", fr"C:\Users\user\Desktop\{title}")
 shutil.move(f"{filepng}", fr"C:\Users\user\Desktop\{title}")
+
+
 
 
 

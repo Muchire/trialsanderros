@@ -113,7 +113,7 @@ def order():
 #
 for index in range(len(food)):
    menu = Radiobutton(vivan,text = food[index],
-                      variable=x,
+                      variable=X,
                       font= ("Impact",20),
                       value=index,
                       bg="purple",
